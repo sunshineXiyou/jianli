@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <!-- 解决兼容问题-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!-- 搜索引擎-->
+    <meta name="author" content="jerehedu">
+    <meta name="keywords" content="bootstrap,css,html">
+    <meta name="description" content="jerehedu">
+
+    <script src="bootstrap/js/jquery-3.1.0.min.js"></script>
+    <!-- jquery在前边，bootstrap依赖jQuery-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <title>讲课记录</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="icon" href="favicon.icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--/*自己的*/-->
+</head>
+<body class="container">
+
+<header class="page-header">
+    <h1 >Bootstrap  <small>css</small></h1>
+
+    <nav class="navbar navbar-inverse">
+                               <!-- 可以自定义，在自己的样式表里写新样式，优先级高于原生-->
+        <div class="container-fluid">
+
+            <div class="navbar-header ">
+                <div class="navbar-brand">
+                    <span >BootStrop</span>
+                </div>
+                <button data-target="#subNav" data-toggle="collapse" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div id="subNav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">导航菜单1</a></li>
+                    <li><a href="#">导航菜单2</a></li>
+                    <li><a href="#">导航菜单3</a></li>
+                    <li><a href="#">导航菜单4</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<br><br><br><br><br>
+
+<!--引用-->
+<blockquote class="pull-right">
+    <h1>引用BootStrap</h1>
+    <!--
+       text-right
+    -->
+    <footer>
+        <span>css</span>
+    </footer>
+</blockquote>
+<br><br><br><br><br>
+
+
+<!--巨幕-->
+<div class="jumbotron">
+    <h1 >Bootstrap</h1>
+    <a href="#" class="btn btn-default">查看详情</a>
+    <a href="#" class="btn btn-danger">查看详情</a>
+    <a href="#" class="btn btn-warning">查看详情</a>
+    <a href="#" class="btn btn-success">查看详情</a>
+    <a href="#" class="btn btn-primary pull-right">查看详情</a>
+</div>
+<br><br><br><br><br>
+
+
+<!--字体图标相关类  可以用在任何地方-->
+<span class="glyphicon glyphicon-home "></span>
+<span class="glyphicon glyphicon-ok"></span>
+<span class="glyphicon glyphicon-book "></span>
+<br><br><br><br><br>
+
+
+<!--列表-->
+<div style="width:300px">
+    <ul class="list-group">
+        <li class="list-group-item-danger"><a href="#">aaa</a></li>
+        <li class="list-group-item list-group-item-success"><a href="#">aaa</a></li>
+        <li class="list-group-item">aaa</li>
+        <li class="list-group-item">aaa</li>
+    </ul>
+</div>
+<br><br><br><br><br>
+
+
+<!--     -------------          table           ------  -->
+<div class="table-responsive">
+<table class="table table-hover table-bordered table-striped table-condensed ">
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>home</th>
+    </tr>
+    <tr>
+        <th>a</th>
+        <th>1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</th>
+        <th>aa</th>
+    </tr>
+    <tr>
+        <th>a</th>
+        <th>11</th>
+        <th>aa</th>
+    </tr>
+</table>
+</div>
+<br><br><br><br><br>
+
+<!--栅栏系统-->
+<div class="row">
+    <div class="col-sm-3" style="min-height: 500px;background-color: red"></div>
+    <div class="col-sm-9" style="min-height:500px;background-color: blue">
+        <div class="row" style="min-height:200px;background-color: yellowgreen"></div>
+        <div class="row">
+            <div class="col-sm-3" style="min-height:300px;background-color: yellow"></div>
+            <div class="col-sm-3" style="min-height:300px;background-color:lightgrey"></div>
+            <div class="col-sm-3" style="min-height:300px;background-color: darkcyan"></div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br>
+
+
+
+<!--偏移offset   推 拉push pull  -->
+<div class="row">
+    <div class="col-sm-2 col-sm-offset-2" style="min-height:30px; background-color: palegreen">偏移</div>
+    <div class="col-sm-2 col-sm-pull-1" style="min-height:30px; background-color: palegoldenrod">拉</div>
+    <div class="col-sm-2 col-sm-push-1" style="min-height:30px; background-color: pink">推1</div>
+    <div class="col-sm-2" style="min-height:30px; background-color:palegreen"></div>
+    <div class="col-sm-2  " style="min-height:30px; background-color:yellow"></div>
+    <div class="col-sm-2" style="min-height:30px; background-color: palegreen"></div>
+    <!--<div class="col-sm-2" style="min-height:30px; background-color: red"></div>-->
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<!--标签-->
+<pre>
+    &lt;script&gt;
+               $function(){}
+
+    &lt;script&gt;
+</pre>
+<!-- pre：
+保留代码的样式，
+多余的空格也会保留下来
+-->
+<!--code
+var ;  声明变量是斜体
+    -->
+<var>
+<code>
+    a=3;
+    var c=44;
+</code>
+</var>
+
+<!--kbd  模拟键盘-->
+<p>
+    <kbd>F4</kbd>
+</p>
+
+<!--samp  仅仅是做出个 程序输出样式-->
+<p> var div=document.getElementById();</p>
+<samp>
+    var div=document.getElementById();
+</samp>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+<!--Form 表单-->
+
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+
+            <form action="#" method="post" class="form-horizontal ">
+            <div class="form-group  has-feedback">
+                <label for="email" class="control-label col-sm-2">邮箱</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="email" placeholder="enter email" id="email">
+                    <span class=""></span>
+                </div>
+            </div>
+
+            <div class="form-group has-feedback ">
+                <label for="username" class="control-label col-sm-2">姓名</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="username" placeholder="enter name" id="username">
+                    <span class=""></span>
+                </div>
+            </div>
+
+            <div class="form-group has-feedback">
+                <label for="password" class="control-label col-sm-2">密码</label>
+                <div class="col-sm-10">
+                    <input  class="form-control" type="password" placeholder="enter password" id="password">
+                    <span class=""></span>
+                </div>
+            </div>
+
+
+                <script>
+//                    var checkName = function(){
+//                        var name= $('#username');
+//                        if(name.val()==""){
+//                         name.parent().parent()
+//                            .removeClass().addClass("form-group has-feedback has-error");
+//                           //removeClass（）先移除原来的样式，，，  然后再add新的样式  addClass（）
+//                            name.next().removeClass().addClass("glyphicon glyphicon-remove-sign form-control-feedback")
+//                            //span和input是兄弟关系，所以用name.next()
+
+//                           // return false;
+//                        }else{
+//                            name.parent().parent()
+//                                    .removeClass().addClass("form-group has-feedback has-success");
+//                            name.next().removeClass().addClass("glyphicon glyphicon-ok-sign form-control-feedback")
+//
+//                        }
+//                    }
+//                    $(function(){
+//                        $('#btnSumit').click(function(){
+//                            /*
+//                              执行校验
+//                             */
+//                            checkName();
+//                        });
+//
+//                    });
+
+
+
+                var checkForm = function(obj){
+
+                    if(obj.val()==""){
+                        obj.parent().parent()
+                                .removeClass().addClass("form-group has-feedback has-error");
+                        //removeClass（）先移除原来的样式，，，  然后再add新的样式  addClass（）
+                        obj.next().removeClass().addClass("glyphicon glyphicon-remove-sign form-control-feedback")
+                        //span和input是兄弟关系，所以用name.next()
+                //                            return false;
+                    }else{
+                        obj.parent().parent()
+                                .removeClass().addClass("form-group has-feedback has-success");
+                        obj.next().removeClass().addClass("glyphicon glyphicon-ok-sign form-control-feedback")
+
+                    }
+                }
+                $(function(){
+                    $('#btnSumit').click(function(){
+                        /*
+                          执行校验
+                         */
+                        checkForm($('#username'));
+                        checkForm($('#email'));
+                        checkForm($('#password'));
+                    });
+
+                });
+                </script>
+             </form>
+
+    </div>
+
+    <div class="col-sm-1 col-sm-offset-6" style="min-height: 50px;">
+        <button id="btnSumit" class="btn btn-success">submit</button>
+    </div>
+    <div class="col-sm-1 " style="min-height: 50px;">
+        <button id="btnReset" class="btn btn-danger">reset</button>
+    </div>
+    <!--
+    class="glyphicon glyphicon-ok-sign form-control-feedback"
+    class="glyphicon glyphicon-warning-sign form-control-feedback"
+    class="glyphicon glyphicon-ok-sign form-control-feedback"
+    class="glyphicon glyphicon-remove-sign form-control-feedback"
+    -->
+</div>
+
+<br><br><br><br><br><br>
+
+
+
+
+<h1>btn</h1>
+<br>
+
+<button type="button" class="btn btn-warning btn-lg">warning</button>
+<button type="button" class="btn btn-success btn-sm">success</button>
+<button type="button" class="btn btn-primary btn-xs">primary</button>
+<button type="button" class="btn btn-info">info</button>
+<button type="button" class="btn btn-default">default</button>
+<button type="button" class="btn btn-danger">danger</button>
+
+<button type="button" class="btn btn-link">btn-link</button>
+
+<div>
+  <textarea class="form-control" name="text" id="text" cols="30" rows="10"></textarea>
+    <a href="#" class="btn btn-primary btn-block">提交</a>
+</div>
+<br><br><br><br>
+
+
+
+<h1 class="text-capitalize">img</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="img/a.jpg " class="img-responsive img-rounded" alt="pic">
+        </div>
+        <div class="col-sm-3">
+            <img src="img/b.jpg" class="img-responsive img-thumbnail" alt="pic">
+        </div>
+        <div class="col-sm-3">
+            <img src="img/c.jpg" class="img-responsive img-circle" alt="pic">
+        </div>
+        <div class="col-sm-3">
+            <img src="img/d.jpg" class="img-responsive img-circle" alt="pic">
+        </div>
+
+    </div>
+
+</div>
+<br><br><br><br>
+
+
+<h1>辅助类</h1>
+<h3>情景文本</h3>
+<div>
+    <p class="text-primary">primary</p>
+    <p class="text-danger">danger</p>
+    <p class="text-success">success</p>
+    <p class="text-info">info</p>
+    <p class="text-warning">warning</p>
+    <p class="text-justify">justify</p>
+    <p class="text-muted">muted</p>
+</div>
+<h3>情景背景</h3>
+<div>
+    <p class="label-danger">label-danger</p>
+    <p class="label-default">default</p>
+    <p class="label-info">info</p>
+    <p class="label-primary">primary</p>
+    <p class="label-success">success</p>
+    <p class="label-warning">warning</p>
+
+</div>
+<h3>关闭按钮</h3>
+<div>
+    <!--<span class="glyphicon glyphicon-copyright-mark"></span>-->
+    <!--<button type="button" class="close" id="close">&copy;</button>-->
+    <p style="min-height: 200px;background: gainsboro">
+        <button type="button" class="close" id="close">&times;</button>
+        <!--<button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
+
+    </p>
+<script>
+        $('#close').click(function(){
+            $(this).parent().hide();
+        })
+</script>
+
+    <h3>下拉按钮</h3>
+    <div>
+        <button type="button" class="btn btn-primary visible-lg hidden-md ">
+            <!--
+            hidden-md  中屏隐藏（根据不同分辨率）
+            show 显示
+            -->
+            DropDown
+            <span class="caret"></span>
+        </button>
+<!--
+    响应式工具：
+      visible-md  中屏可见
+-->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+<!--footer部分-->
+<footer class="navbar-fixed-bottom text-center label-primary">
+    <!--
+    abbr--abbreviotion  用于专业名词的解释
+    -->
+    <abbr title="杰瑞教育科技有限公司" class="initialism">jerehedu</abbr>
+</footer>
+
+</body>
+</html>

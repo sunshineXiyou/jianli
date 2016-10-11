@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<table  border="1px">
+   <thead>
+    <tr>
+        <td>学号</td>
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>班级</td>
+    </tr>
+   </thead>
+    <tbody id="tb"></tbody>
+</table>
+
+<br><br><br><br>
+
+<table  border="1px">
+    <thead>
+    <tr>
+        <td>no</td>
+        <td>name</td>
+        <td>age</td>
+        <td>grade</td>
+    </tr>
+    </thead>
+    <tbody id="ta"></tbody>
+</table>
+
+<script>
+    $.getJSON("json/tableObject.json",function(data){
+        var row = data.stu;
+        var ht = '';//用于字符串拼接
+        for(var i=0;i<row.length;i++){
+            ht += '<tr>';
+            ht += '<td>' + row[i].no + '</td>';
+            ht += '<td>' +row[i].name + '</td>';
+            ht += '<td>' +row[i].age + '</td>';
+            ht += '<td>' +row[i].grade + '</td>';
+            ht +='</tr>';
+        }
+        console.log(ht);
+        $('#tb').append(ht);
+    })
+
+
+    $(function () {
+        $.ajax({
+            type:"get",
+            url:"json/tableString.json",
+            dataType: "json",
+            success:function(string){
+                console.log(string);
+                var data=eval("("+string+")");//转换成json对象
+
+//                var rows=data.rows;
+                var str= '';
+                for(var i=0;i<data.result.length;i++){
+                    str += '<tr>';
+                    str +=  '<td>'+ data.result[i].no + '</td>';
+                    str += '<td>'+ data.result[i].name + '</td>';
+                    str += '<td>'+ data.result[i].age + '</td>';
+                    str += '<td>'+ data.result[i].grade + '</td>';
+                    str += '</tr>';
+                }
+                $('#ta').append(str);
+            }
+        });
+    })
+
+
+    //    $.getJSON("json/tableObject.json",function(data){
+//        console.log(data);
+//        var html = "<tr>"+"<td>"+data.data[0].no+"</td>"+"<td>"+data.data[0].name+"</td>"+"<td>"+data.data[0].age+"</td>"+"<td>"+data.data[0].grade+"</td>"+"</tr>"
+//                +"<tr>"+"<td>"+data.data[1].no+"</td>"+"<td>"+data.data[1].name+"</td>"+"<td>"+data.data[1].age+"</td>"+"<td>"+data.data[1].grade+"</td>"+"</tr>"
+//                +"<tr>"+"<td>"+data.data[2].no+"</td>"+"<td>"+data.data[2].name+"</td>"+"<td>"+data.data[2].age+"</td>"+"<td>"+data.data[2].grade+"</td>"+"</tr>";
+//        $("#tb").append(html);
+//    });
+
+
+
+
+</script>
+
+
+
+
+
+<!--<table id = "tb" border="1">-->
+    <!--<tr></tr>-->
+    <!--<tr></tr>-->
+    <!--<tr></tr>-->
+    <!--<tr></tr>-->
+<!--</table>-->
+
+<!--<script>-->
+    <!--var json = {"姓名":"张三","年龄":"26","性别":"男"};-->
+                          <!--//获取tr-->
+    <!--var tr = document.getElementsByTagName('tr');-->
+    <!--//tr1和tr2下面会用到，但是要先声明，给一个空值-->
+    <!--var tr1 = '';-->
+    <!--var tr2 = '';-->
+    <!--//用for in来进行遍历，k是键，json[k]是值-->
+    <!--for(var k in json){-->
+        <!--tr1+='<th>'+k+'</th>';-->
+        <!--tr2+='<td>'+json[k]+'</td>';-->
+    <!--}-->
+    <!--//tr1里放的是键，也就是姓名，年龄，性别，然后把这些信息放到第一个tr里-->
+    <!--tr[0].innerHTML = tr1;-->
+    <!--//tr2里放的是值，也就是张三，26，男，把这些信息放到第二个tr里-->
+    <!--tr[1].innerHTML = tr2;-->
+<!--</script>-->
+
+
+
+
+
+<!--<table id="myTable">-->
+    <!--<thead>-->
+    <!--<tr>-->
+        <!--<th>代号</th>-->
+        <!--<th>城市</th>-->
+        <!--<th>附加数字</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody></tbody>-->
+<!--</table>-->
+<!--<script>-->
+    <!--var data = [{name:'6101',value:'北京市',age:'11'}, {name:'6102',value:'天津市',age:'11'}, {name:'6103',value:'上海市',age:'22'}];-->
+    <!--function getRow(row) {-->
+        <!--var tr = $('<tr></tr>');-->
+        <!--for(var i in row) {-->
+            <!--tr.append('<td>' + row[i] + '</td>');-->
+        <!--}-->
+        <!--return tr;-->
+    <!--}-->
+    <!--var tbody = $('<tbody></tbody>');-->
+    <!--for(var i = 0; i < data.lenght; i ++ ){-->
+        <!--tbody.append(getRow(data[i]),-->
+    <!--$('#myTable tbody').replaceWith(tbody))};-->
+<!--</script>-->
+</body>
+</html>

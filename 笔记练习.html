@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <!-- 解决兼容问题-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!-- 搜索引擎-->
+    <meta name="author" content="jerehedu">
+    <meta name="keywords" content="bootstrap,css,html">
+    <meta name="description" content="jerehedu">
+
+    <script src="bootstrap/js/jquery-3.1.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="icon" href="favicon.icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--/*自己的*/-->
+    <title>笔记练习</title>
+</head>
+
+<body class="container"><!--容器布局  自动留白，可以写在任意位置-->
+
+
+
+
+<h1> 导航</h1>
+
+<header  class="page-header">  <!-- 页头 效果-->
+    <nav class="navbar navbar-inverse">  <!-- 导航条  颜色反转，即黑背景-->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand"> <!-- 相当于logo-->
+                  <span>bootstrap</span>
+                </div>
+                <button data-target="#subNav" data-toggle="collapse" class="navbar-toggle"> <!-- 折叠菜单的按钮   以上三步-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="subNav" class="collapse navbar-collapse"> <!-- 容器折叠    导航折叠-->
+                <ul class="nav navbar-nav">  <!-- 导航条的nav 还提供了其他导航-->
+                    <li><a href="#">导航1</a></li>
+                    <li><a href="#">导航1</a></li>
+                    <li><a href="#">导航1</a></li>
+                    <li><a href="#">导航1</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<br><br><br>
+
+
+
+
+
+<h1>  引用 </h1>
+
+<blockquote>
+    <h1>hello</h1>
+    <span>来自<code>bootstrap</code></span>
+    <!-- code 代码标签
+        footer 自带  --线
+    -->
+    <footer >
+        <span>css</span>
+    </footer>
+</blockquote>
+
+<br><br><br>
+
+
+
+
+<h1>巨幕</h1>
+
+<div class="jumbotron">
+    <h1>咨询概览</h1>
+    <a href="#">查看详情</a>
+    <!-- 按钮的样式-->
+    <a href="#" class="btn btn-success">查看详情</a>
+    <a href="#" class="btn btn-warning">查看详情</a>
+</div>
+
+
+<br><br><br>
+
+
+
+<h1>字体图标相关类  可以用在任何地方</h1>
+
+<span class="glyphicon glyphicon-home"></span>
+<span class="glyphicon glyphicon-alert"></span>
+<span class="glyphicon glyphicon-ok"></span>
+
+
+<br><br><br>
+
+
+
+
+
+<h1>列表相关类</h1>
+
+<div style="width: 300px">
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-danger">aaaa</li>
+        <li class="list-group-item">aaaa</li>
+        <li class="list-group-item">aaaa</li>
+    </ul>
+</div>
+
+
+
+<br><br><br>
+
+
+
+
+<h1>    table    </h1>
+<!--
+    table ：定义表格的样式
+table-hover ：
+table-striped ：斑马线样式
+table-condensed ：压缩，紧凑型表格
+table-responsive   加在table的父元素上
+-->
+<div class="table-responsive">
+<table class="table table-hover table-striped table-condensed table-bordered ">
+    <tr>
+        <td>qq</td>
+        <td>qq</td>
+    </tr>
+    <tr>
+        <td>ww</td>
+        <td>ww</td>
+    </tr>
+    <tr>
+        <td>ss</td>
+        <td>ss</td>
+    </tr>
+</table>
+</div>
+
+
+
+
+
+<br><br><br>
+<h1>栅格系统  一行12列</h1>
+<!--
+        栅格系统相关类：
+        row:  定义行对应上图的蓝色框
+        col-lg ：对应大尺寸屏幕
+        col-md ：对应中型屏幕
+        col-sm ：对应小型屏幕（ pad ）
+        col-xs ：对应超小型屏幕
+        col-md-3 ：占几列，和不能超过 12
+        col-md-offset-2 ：偏移 2 列
+        col-sm-push-N:  向右推 N 列 (0<N<12)
+        col-sm-pull-N:  向左拉 N 列 (0<N<12)
+        ( 这种推拉一般不会用，特殊情况下可以使用 )
+        min-height：最小高度
+        表格可以嵌套。单元格里边嵌套行。
+-->
+<div class="row">
+    <div class="col-sm-3" style="min-height: 400px;background: red"></div>
+    <div class="col-sm-8" style="min-height: 400px;background: yellow">
+        <div class="row" style="min-height: 100px;background: #ff77dc" ></div>
+        <div class="row">
+            <div class="col-sm-4" style="min-height: 200px; background: blue"></div>
+            <div class="col-sm-4" style="min-height: 200px; background: green"></div>
+        </div>
+    </div>
+</div>
+<br><br><br><br>
+
+
+
+
+
+<h1>列偏移offset  推拉pull push</h1>
+<div class="row">
+    <div class="col-sm-3 col-sm-offset-2" style="min-height: 20px;background: red"></div>
+    <div class="col-sm-3 col-sm-push-1" style="min-height: 20px;background: yellow"></div>
+    <div class="col-sm-3" style="min-height: 20px;background: red"></div>
+    <div class="col-sm-3" style="min-height: 20px;background: yellow"></div>
+</div>
+<br><br><br><br>
+
+
+
+
+
+<h1>标签</h1>
+
+<!--
+    pre:预格式，保留代码的样式，但是多余的空格也会保留下来
+    code:代码
+    var:声明变量时斜体表示
+    kbd:模拟键盘
+    samp:仅仅做出一个程序输出的样式
+-->
+<pre>
+    &lt;script&gt;
+    <!-- <>左右尖括号要用 &lt 和 &gt 转译-->
+       $function(){
+                       var aaaa=5;
+    };
+    &lt;script&gt;
+</pre>
+<code>
+    css
+</code>
+
+<br><br><br><br><br><br>
+
+
+
+
+
+<h1>表单 Form</h1>
+<!--
+               form-horizontal:水平形式
+               通过为表单添加 .form-horizontal 类，并联合使用 Bootstrap 预置的栅格类，可以将 label 标签和控件组水平并排布局。
+               这样做将改变 .form-group 的行为，使其表现为栅格系统中的行（row），因此就无需再额外添加 .row 了
+               form-group:
+               form-control:
+               control-label:
+               单独的表单控件会被自动赋予一些全局样式。
+               所有设置了 .form-control 类的 <input>、<textarea> 和 <select> 元素都将被默认设置宽度属性为 width: 100%;。
+                将 label 元素和前面提到的控件包裹在 .form-group 中可以获得最好的排列。
+               has-feedback:
+
+               eg:
+               <form action="#" method="post" class="form-horizontal">
+               <div class="form-group">
+                   <label class="control-label"></label>
+                   <input class="form-control" type="" placeholder="">
+               </div>
+           </form>
+
+
+           -->
+
+<div class="row">
+
+    <div class="col-sm-6 col-sm-offset-3">
+
+        <form action="#" method="post" class="form-horizontal"><!-- form-horizontal   水平形式-->
+            <div class="form-group has-feedback">
+                <label for="email" class="control-label col-sm-2">email</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="email" type="email" placeholder="enter email">
+                    <span class=""></span>
+                </div>
+            </div>
+
+            <div class="form-group has-feedback">
+                <label for="username" class="control-label col-sm-2">username</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="username" type="username" placeholder="enter username ">
+                    <span class=""></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="control-label col-sm-2" for="password" >password</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="password" type="password" placeholder="enter password">
+                    <span class=""></span>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-sm-1 col-sm-offset-6">
+        <button id="btnSubmit" class="btn btn-success">submit</button>
+    </div>
+    <div class="col-sm-1">
+        <button id="btnReset" class="btn btn-warning">reset</button>
+    </div>
+</div>
+<script>
+    var checkForm=function(obj){
+     if(obj.val()==""){
+         obj.parent().parent()
+                 .removeClass().addClass("form-group has-feedback has-eeror");
+         obj.next().removeClass().addClass("glyphicon glyphicon-remove-sign form-control-feedback")
+
+     }else{
+         obj.parent().parent()
+                 .removeClass().addClass("form-group has-feedback has-success")
+         obj.next().removeClass().addClass("glyphicon glyphicon-ok-sign form-control-feedback")
+     }
+
+    }
+
+
+    $(function(){
+        $('#btnSubmit').click(function(){
+            checkForm($("#username"));
+            checkForm($("#email"));
+            checkForm($("#password"));
+        });
+    });
+</script>
+<br><br><br><br><br><br>
+
+
+
+
+
+<h1>排版</h1>
+<div class="container">
+    <!-- 直接使用标签-->
+    <h1>hello<small>h1</small></h1>
+    <h2>hello<small>h2</small></h2>
+    <h3>hello<small>h3</small></h3>
+    <h4>hello<small>h4</small></h4>
+    <h5>hello<small>h5</small></h5>
+    <h6>hello<small>h6</small></h6>
+
+</div>
+<br>
+
+
+
+
+
+<br><br><br><br><br><br>
+</body>
+</html>

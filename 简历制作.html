@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <!-- 解决兼容问题-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!-- 搜索引擎-->
+    <meta name="author" content="jerehedu">
+    <meta name="keywords" content="bootstrap,css,html">
+    <meta name="description" content="jerehedu">
+
+    <script src="bootstrap/js/jquery-3.1.0.min.js"></script>
+    <!-- jquery在前边，bootstrap依赖jQuery-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="icon" href="favicon.icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--/*自己的*/-->
+    <title></title>
+    <style>
+        .pic{
+            width: 140px;
+            height: 140px;
+            padding-bottom:20px ;
+        }
+        #pic1{
+            overflow:hidden;
+            text-align:center;
+            padding:10px;
+        }
+        #enlarge_images{
+            width:300px;
+            height: 300px;
+           position: absolute;
+            margin-left: -750px;
+            margin-bottom: 450px;
+            /*display:none;*/
+            z-index:2222;
+        }
+        #enlarge_images img{
+            width: 700px;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+<!--
+    个人信息：图片，姓名等
+    教育背景：
+    联系地址：
+    自我评价：
+    项目经验：
+    项目展示：
+-->
+<div class="container">
+
+    <header class="page-header">
+        <h1 class="text-center"><strong>个人简历</strong></h1>
+    </header>
+
+    <div class="row">
+       <div class="col-sm-4 col-xs-12" style="min-height:1000px; background: #ebeff4">
+           <div class="row" style="min-height: 380px">
+                <div class="col-sm-6 col-sm-offset-3" style="min-height: 150px">
+                   <img src="img/a.jpg" style="width: 140px;height: 140px" class="img-circle" alt="pic">
+                </div>
+                <div class="col-sm-12 "  style="min-height: 230px ">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-heading list-group-item-success "><strong>个人信息</strong></li>
+                        <li class="list-group-item "><span class="glyphicon glyphicon-user"> 姓名：刘梦醒</span></li>
+                        <li class="list-group-item "><span class="glyphicon glyphicon-phone"> 电话：18363885203</span></li>
+                        <li class="list-group-item "><span class="glyphicon glyphicon-envelope"> 邮箱：1005332312@qq.com</span></li>
+                        <li class="list-group-item "><span class="glyphicon glyphicon-map-marker"> 地址：山东省烟台市莱山区</span></li>
+                    </ul>
+                </div>
+           </div>
+           <div class="row" style="min-height: 280px">
+               <div class="col-sm-12">
+                   <ul class="list-group">
+                       <li  class="list-group-item list-group-item-heading list-group-item-success"><strong>教育背景</strong></li>
+                       <li class="list-group-item ">学校：烟台大学文经学院</li>
+                       <li class="list-group-item ">专业：计算机科学与技术</li>
+                       <li class="list-group-item ">学历：本科</li>
+                       <li class="list-group-item ">毕业时间：2016.6</li>
+                       <li class="list-group-item ">
+                           培训经历：2016.8-    ，杰瑞教育，HTML5
+                       </li>
+                   </ul>
+
+               </div>
+
+
+           </div>
+           <div class="row" style="min-height: 200px">
+               <div class="col-sm-12">
+                   <ul class="list-group">
+                       <li  class="list-group-item list-group-item-heading list-group-item-success"><strong>自我评价</strong></li>
+                   </ul>
+                   <p>
+                       lmx
+                   </p>
+                   <p>
+                       lmx
+                   </p>
+                   <p>
+                       lmx
+                   </p>
+               </div>
+
+           </div>
+           <div class="row" style="min-height: 170px">
+               <div class="col-sm-12">
+                   <ul class="list-group">
+                       <li  class="list-group-item list-group-item-heading list-group-item-success"><strong>兴趣爱好</strong></li>
+                   </ul>
+                 <p>
+                     <span>&nbsp;&nbsp;</span>
+                     <span class="glyphicon glyphicon-camera ">  &nbsp;</span>
+                     <span class="glyphicon glyphicon-music"> &nbsp; </span>
+                     <span class="glyphicon glyphicon-book"> &nbsp;</span>
+                 </p>
+                   <p>
+                       <span>camera</span>
+                       <span>&nbsp;music</span>
+                       <span>&nbsp;book</span>
+                   </p>
+
+               </div>
+           </div>
+       </div>
+
+       <div class="col-sm-8  col-xs-12" style="min-height:1000px; background: #dbf5d0">
+           <div class="row" style="min-height: 200px;background: #dbf5d0">
+               <div class="col-sm-12" style="min-height: 30px">
+                   <ul class="list-group">
+                       <li  class="list-group-item list-group-item-heading list-group-item-info lead text-center">
+                           职业技能
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-sm-12 " style="min-height: 150px">
+                  <p>熟练掌握</p>
+                  <p><span>css</span></p>
+                  <p><span>javascript</span></p>
+                   <p>bootstrap</p>
+               </div>
+           </div>
+           <div class="row" style="min-height: 200px;background: #d0eac5">
+               <div class="col-sm-12">
+                   <ul class="list-group" style="min-height: 30px">
+                       <li  class="list-group-item list-group-item-heading list-group-item-warning lead text-center">
+                           项目经验
+                       </li>
+                   </ul>
+               </div>
+                   <div class="col-sm-12 table-responsive" style="min-height: 150px">
+                       <table class="table table-hover table-bordered text-center">
+                           <tr>
+                               <td>项目1</td>
+                               <td>项目2</td>
+                               <td>项目3</td>
+                           </tr>
+                           <tr>
+                               <td>仿时风集团网页</td>
+                               <td>全屏滚动</td>
+                               <td>烟台搜房网</td>
+                           </tr>
+                           <tr>
+                               <td>时风简介</td>
+                               <td>全屏简介</td>
+                               <td>搜房简介</td>
+                           </tr>
+                           <tr>
+                               <td>用到知识点</td>
+                               <td>用到知识点</td>
+                               <td>用到知识点</td>
+                           </tr>
+                       </table>
+                   </div>
+           </div>
+           <div class="row" style="min-height: 530px;background: #c9e2be">
+               <div class="col-sm-12" style="min-height: 30px">
+                   <ul class="list-group">
+                       <li  class="list-group-item list-group-item-heading list-group-item-danger lead text-center">
+                           项目展示</li>
+                   </ul>
+               </div>
+                   <div id="pic1" class="row" style="min-height: 500px ">
+                       <div class="col-sm-3 col-sm-offset-2">
+                           <a href="#" target="_blank">
+                               <img src="img/sf1.png" class="img-responsive pic">
+                           </a></div>
+                       <div class="col-sm-3">
+                           <a href="#" target="_blank">
+                               <img src="img/sf2.png" class="img-responsive pic">
+                           </a></div>
+                       <div class="col-sm-3">
+                           <a href="#" target="_blank">
+                               <img src="img/q1.png" class="img-responsive pic">
+                           </a></div>
+
+                       <div class="col-sm-3 col-sm-offset-2">
+                           <a href="#" target="_blank">
+                               <img src="img/h1.png" class="img-responsive pic" >
+                           </a></div>
+                       <div class="col-sm-3">
+                          <a href="#" target="_blank">
+                              <img src="img/s1.png" class="img-responsive pic"></a>
+                       </div>
+                       <div class="col-sm-3">
+                           <a href="#" target="_blank">
+                               <img src="img/f1.png" class="img-responsive pic">
+                           </a>
+                       </div>
+                   </div>
+               <div id="enlarge_images"></div>
+           </div>
+       </div>
+    </div>
+</div>
+<script>
+    var demo = document.getElementById("pic1");
+//    var demo=document.getElementById("pic2");
+    var gg = demo.getElementsByTagName("img");
+    var ei = document.getElementById("enlarge_images");
+    for(i=0; i<gg.length; i++){
+        var ts = gg[i];
+        ts.onmousemove = function(event){
+            event = event || window.event;
+            ei.style.display = "block";
+            ei.innerHTML = '<img src="' + this.src + '" />';
+            ei.style.top  = document.body.scrollTop + event.clientY + -500 + "px";
+            ei.style.left = document.body.scrollLeft + event.clientX + -450 + "px";
+        }
+        ts.onmouseout = function(){
+            ei.innerHTML = "";
+            ei.style.display = "none";
+        }
+        ts.onclick = function(){
+            window.open( this.src );
+        }
+    }
+</script>
+<br><br><br>
+<footer></footer>
+</body>
+</html>

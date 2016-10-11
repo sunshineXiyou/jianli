@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+
+
+
+<script>
+$(function () {
+    $.ajax({
+        type:"get",
+        url:"http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e",
+        dataType: "json",
+        success:function(string){
+            console.log(string);
+            var data=eval("("+string+")");//转换成json对象
+
+//                var rows=data.rows;
+            var str= '';
+            for(var i=0;i<data.result.length;i++){
+                str += '<tr>';
+                str +=  '<td>'+ data.result[i].no + '</td>';
+                str += '<td>'+ data.result[i].name + '</td>';
+                str += '<td>'+ data.result[i].age + '</td>';
+                str += '<td>'+ data.result[i].grade + '</td>';
+                str += '</tr>';
+            }
+            $('#ta').append(str);
+        }
+    });
+})
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

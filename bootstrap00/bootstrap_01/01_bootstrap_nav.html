@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--
+        解决兼容性问题
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+
+    <!--
+        搜索引擎
+    -->
+    <meta name="author" content="jerehedu">
+    <meta name="keywords" content="bootstrap,css,html">
+    <meta name="description" content="jerehedu">
+    <title>bootstrap_nav</title>
+
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/01_bootstrap_nav.css"/>
+
+    <!--<link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.3/css/bootstrap.css" rel="stylesheet">-->
+    <!--
+        注释：自定义样式文件写在bootstrap提供的样式文件后面。
+    -->
+</head>
+<body class="container-fluid">
+    <!--
+        1. .container 类：容器布局，可以写在任何元素上，作用就是定义一个容器。
+            由 bootstrap.min.css 提供
+    -->
+    <header class="page-header">
+        <h1 class="visible-sm">bootstrap_nav <small>demo</small></h1>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        Bootstrap
+                    </div>
+                    <!--
+                        折叠菜单需要通过data-target去定位到指定菜单
+                    -->
+                    <button data-target="#subNav" data-toggle="collapse" class="navbar-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!--
+                    collapse:折叠
+                -->
+                <div id="subNav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">导航菜单1</a></li>
+                        <li><a href="#">导航菜单2</a></li>
+                        <li><a href="#">导航菜单3</a></li>
+                        <li><a href="#">导航菜单4</a></li>
+
+                    </ul>
+                    <form class="navbar-form pull-left">
+                        <input type="text" class="search-query" placeholder="Search"
+                               style="height: 35px">
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="row">
+        <div class="col-md-3">
+            <span class="glyphicon glyphicon-home"></span>
+            左侧边栏
+
+            <div style="margin-top: 5px">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#">列表项1</a></li>
+                    <li class="list-group-item"><a href="#">列表项2</a></li>
+                    <li class="list-group-item"><a href="#">列表项3</a></li>
+                    <li class="list-group-item"><a href="#">列表项4</a></li>
+                    <li class="list-group-item"><a href="#">列表项5</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <blockquote>
+                <h3>正文区域</h3>
+                <footer>引用<code>bootstrap</code>的样式</footer>
+            </blockquote>
+            <div class="jumbotron">
+                <h2>网站样式来自bootstrap</h2>
+                <a class="btn btn-primary pull-right" href="#">了解更多</a>
+                <div class="clear"></div>
+            </div>
+
+            <table class="table table-hover table-striped">
+                <tr>
+                    <td>课程名称</td>
+                    <td>班级名称</td>
+                    <td>授课老师</td>
+                </tr>
+                <tr>
+                    <td>Android</td>
+                    <td>Android1605</td>
+                    <td>高老师</td>
+                </tr>
+                <tr>
+                    <td>Html5</td>
+                    <td>1609</td>
+                    <td>郭老师</td>
+                </tr>
+                <tr>
+                    <td>IOS</td>
+                    <td>1604</td>
+                    <td>王老师</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-2">
+            <span>右侧边栏</span>
+
+            <dl>
+                <dt>标题1</dt>
+                <dd>描述信息1</dd>
+                <dt>标题2</dt>
+                <dd>描述信息2</dd>
+                <dt>标题3</dt>
+                <dd>描述信息3</dd>
+            </dl>
+        </div>
+    </div>
+
+    <footer class="navbar-fixed-bottom text-center label-danger">
+        <!--
+            abbr: abbreviation
+            都用于专业名词的解释
+        -->
+        <abbr title="杰瑞教育">Jerehedu</abbr> 版权所有CopyRight &copy; 2016 All rights reserved
+    </footer>
+
+    <!--
+        放在</body>之前是为了不影响html的加载
+    -->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
